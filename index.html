@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aggm Nodes</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Aggm Nodes">
+<link rel="apple-touch-icon" href="icon-192x192.png">
+<link rel="stylesheet" href="styles.css" />
+<meta name="author" content="Adolfo GM">
+<meta name="description" content="Node IDE Editor - Created by Adolfo GM">
+</head>
+<body>
+
+<div id="app">
+  <div id="sidebar">
+    <img src="logo.png" alt="Aggm Nodes Logo" id="logo" style="height: 50px; width: 50px;"/>
+    <h2>Aggm Nodes</h2>
+    <input type="text" id="search-nodes" placeholder="Search nodes... Created by Adolfo GM" />
+    <div id="node-list"></div>
+    <div class="control-buttons">
+        <input type="file" id="import-nodes-file" accept=".json,.js" style="display: none;" />
+        <button id="import-nodes-btn">Import Nodes</button>
+        <button id="export-js-btn">Export to JS</button>
+        <button id="export-python-btn">Export to Python</button>
+    </div>
+  </div>
+  <div id="canvas">
+    <svg id="connections"></svg>
+  </div>
+  <button id="run-btn" title="Run the node graph">▶ Run</button>
+</div>
+
+<div id="context-menu">
+  <div class="context-menu-item" data-action="delete">Delete Node</div>
+  <div class="context-menu-item" data-action="duplicate">Duplicate Node</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
